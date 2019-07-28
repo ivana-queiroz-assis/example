@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "088d3a6f-2f30-4dc0-b30a-3079ffac259a",
+		"name": "GraphQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/rest/books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\tallBooks{\n\t\tisn\n\t\ttitle\n\t\tauthors\n\t\tpublisher\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/rest/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/rest/books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\tbook(id: \"123\"){\n\t\tisn\n\t\ttitle\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/rest/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/rest/books",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\tallBooks{\n\t\tisn\n\t\ttitle\n\t\tauthors\n\t}\n\t\tbook(id: \"123\"){\n\t\tisn\n\t\ttitle\n\t}\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/rest/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"rest",
+						"books"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
